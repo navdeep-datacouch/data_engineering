@@ -20,9 +20,9 @@ minikube delete
 1. Run below to start k3s cluster
 
 ```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
-sudo cp /etc/rancher/k3s/k3s.yaml $HOME/k3s.yaml
-sudo chown $USER:$USER $HOME/k3s.yaml
+cd ~/data_engineering/Kubernetes/Lab7
+chmod 777 runk3s.sh
+./runk3s.sh
 export KUBECONFIG=$HOME/k3s.yaml
 ```
 
@@ -31,7 +31,7 @@ export KUBECONFIG=$HOME/k3s.yaml
 ### Step 1: Apply ConfigMap
 
 ```bash
-cd ~/swift_training/Lab7
+cd ~/data_engineering/Kubernetes/Lab7
 kubectl apply -f configmap.yaml
 ```
 
@@ -108,16 +108,11 @@ exit
 ```
 
 ## ☘️ Step 7: Access the Flask App
-
-### 🔍 To get the EC2 public IP address:
-Run the following command in terminal and it will provide you public IP address of EC2 machine you are using:
-```bash
-curl http://169.254.169.254/latest/meta-data/public-ipv4
 ```
 ### 🔍 Open your local browser and go to:
 Replace the EC2-Address that you have recieved in last command in below URL
 
-  👉 `http://<your-ec2-public-ip>:30000`
+  👉 `http://localhost:30000`
 
 ---
 
@@ -133,6 +128,6 @@ Replace the EC2-Address that you have recieved in last command in below URL
 ## 🧹 Cleanup
 
 ```bash
-cd ~/swift_training/Lab7
+cd ~/data_engineering/Kubernetes/Lab7
 kubectl delete -f .
 ```

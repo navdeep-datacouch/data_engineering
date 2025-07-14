@@ -20,9 +20,9 @@ In this challenge, you will deploy a Node.js application connected to MongoDB us
 1. make sure your k3s cluster is running, if not run below to start k3s cluster
 
 ```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik" sh -
-sudo cp /etc/rancher/k3s/k3s.yaml $HOME/k3s.yaml
-sudo chown $USER:$USER $HOME/k3s.yaml
+cd ~/data_engineering/Kubernetes/Lab8
+chmod 777 runk3s.sh
+./runk3s.sh
 export KUBECONFIG=$HOME/k3s.yaml
 ```
 

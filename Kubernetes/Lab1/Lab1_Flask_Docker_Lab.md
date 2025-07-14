@@ -67,7 +67,7 @@ ENTRYPOINT [ "python","app.py" ]
 Open a terminal and run below commands in the terminal 
 
 ```bash
-cd ~/Kubernetes/Lab1
+cd ~/data_engineering/Kubernetes/Lab1
 docker build -t flask-app:v1 .
 ```
 

@@ -19,6 +19,16 @@ In this lab, you will learn how to use a **Kubernetes Deployment** to manage you
 
 ---
 
+
+1. Run below to start k3s cluster
+
+```bash
+cd ~/data_engineering/Kubernetes/Lab4
+chmod 777 runk3s.sh
+./runk3s.sh
+export KUBECONFIG=$HOME/k3s.yaml
+```
+
 ## ☘️ Step 1: Review Deployment YAML for v1
 
 Open `Lab4/flask_deployment.yaml`:
@@ -50,7 +60,7 @@ spec:
 ## ☘️ Step 2: Deploy the First Version (v1)
 
 ```bash
-cd ~/swift_training/Lab4
+cd ~/data_engineering/Kubernetes/Lab4
 kubectl apply -f flask_deployment.yaml
 ```
 

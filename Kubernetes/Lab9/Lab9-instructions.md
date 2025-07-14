@@ -21,6 +21,9 @@ In this lab, participants will deploy MongoDB as a StatefulSet in Kubernetes, en
 ## ☘️ Pre-requisite: Run K3s cluster
 
 ```bash
+cd ~/data_engineering/Kubernetes/Lab9
+chmod 777 runk3s.sh
+./runk3s.sh
 export KUBECONFIG=$HOME/k3s.yaml
 ```
 
@@ -63,7 +66,7 @@ spec:
 ```
 
 ```bash
-cd ~/swift_training/Lab9
+cd ~/data_engineering/Kubernetes/Lab9
 kubectl apply -f mongodb-headless-service.yaml
 kubectl get svc
 ```
@@ -231,9 +234,8 @@ Each pod has its own PVC, such as:
 ## 🧹 Step 8: Clean Up Resources
 
 ```bash
-kubectl delete statefulset mongodb
-kubectl delete svc mongodb-h mongodb-service
-kubectl delete --all pvc
+cd ~/data_engineering/Kubernetes/Lab9
+kubectl delete -f .
 ```
 
 ---
