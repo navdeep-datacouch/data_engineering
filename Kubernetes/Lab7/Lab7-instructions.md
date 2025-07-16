@@ -55,7 +55,7 @@ kubectl get secret
 ### Step 3: Create PVC with Storage Class
 
 ```bash
-cd ~/swift_training/Lab6
+cd ~/data_engineering/Kubernetes/Lab7
 kubectl apply -f postgres-pv-pvc.yaml
 ```
 
