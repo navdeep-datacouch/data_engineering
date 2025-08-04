@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS sample123 (id varchar(25))
